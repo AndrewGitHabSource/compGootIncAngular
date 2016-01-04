@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "image": "/images/post-img.png",
+    "image": "images/post-img.png",
     "name": "Taste & Sounds from Thailand",
     "date": "19th April",
     "like": "23",
@@ -9,7 +9,7 @@
   },
   {
     "id": "2",
-    "image": "/images/post-img.png",
+    "image": "images/post-img.png",
     "name": "I like long walks, especially when they are taken by people who really annoy me.",
     "date": "19th April",
     "like": "23",
@@ -17,7 +17,7 @@
   },
   {
     "id": "3",
-    "image": "/images/post-img.png",
+    "image": "images/post-img.png",
     "name": "Taste & Sounds from Thailand",
     "date": "19th April",
     "like": "23",
@@ -25,7 +25,7 @@
   },
   {
     "id": "4",
-    "image": "/images/post-img.png",
+    "image": "images/post-img.png",
     "name": "I like long walks, especially when they are taken by people who really annoy me.",
     "date": "19th April",
     "like": "23",
