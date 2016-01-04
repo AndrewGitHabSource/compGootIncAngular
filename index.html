@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+    <title>Index</title>
+    <meta charset="utf-8">
+
+    <link href="css/clear.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery.formstyler.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body ng-controller="HomeController">
+
+<header class="header">
+    <div class="top-header">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#/"><img src="images/logo.png" alt="logo" title="logo"></a>
+                <h4><a href="#/">Good Inc.</a></h4>
+            </div>
+            <div class="search">
+                <form action="" method="post" name="search">
+                    <input name="search-input" placeholder="Search for somthing here">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <nav class="menu">
+            <ul>
+                <li class="active"><a href="#/">Portfolio</a></li>
+                <li><a href="#/">Services</a></li>
+                <li><a href="#/">Staff</a></li>
+                <li><a href="#/">Articles</a></li>
+                <li><a href="#/">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-side-header">
+            <p><a href="#/">Quicklinks</a></p>
+
+            <form name="" method="post">
+                <select name="">
+                    <option>Select from dropdown</option>
+                    <option>Select from dropdown</option>
+                    <option>Select from dropdown</option>
+                    <option>Select from dropdown</option>
+                </select>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+</header>
+
+<div class="main-content wrapper">
+    <ul class="social">
+        <li>
+            <a href="#/"><img src="images/soc1.png" alt="social" title="social"></a>
+            <a href="#/">Twitter</a>
+        </li>
+        <li>
+            <a href="#/"><img src="images/soc2.png" alt="social" title="social"></a>
+            <a href="#/">Facebook</a>
+        </li>
+        <li>
+            <a href="#/"><img src="images/soc3.png" alt="social" title="social"></a>
+            <a href="#/">RSS</a>
+        </li>
+        <li>
+            <a href="#/"><img src="images/soc4.png" alt="social" title="social"></a>
+            <a href="#/">Mail</a>
+        </li>
+    </ul>
+
+    <div class="content">
+
+        <ng-view></ng-view>
+
+        <section class="right-side">
+            <article class="article" ng-right-panel></article>
+
+            <nav>
+                <ul class="right-menu">
+                    <li><a href="#/">About Us<span>(Blaz Robar)</span></a></li>
+                    <li><a href="#/">How to<span>(Jamie Oliver)</span></a></li>
+                    <li><a href="#/">Write for us<span>(Bill Muarry)</span></a></li>
+                    <li><a href="#/">Video Testimonails<span>(John Smith)</span></a></li>
+                </ul>
+            </nav>
+        </section>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="top-part-footer">
+        <div class="wrapper">
+
+            <div class="logo">
+                <a href=""><img src="images/logo.png" alt="logo" title="logo"></a>
+                <h4><a href="">Good Inc.</a></h4>
+            </div>
+
+            <nav class="menu footer-menu">
+                <ul>
+                    <li class="active"><a href="">Portfolio</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Staff</a></li>
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="bottom-footer">
+
+            <ul class="bottom-menu">
+                <li><a href="">About us</a></li>
+                <li><a href="">Footer Links here</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Page Links also</a></li>
+            </ul>
+
+            <p class="footer-info clear">
+                As cross as a hoon my built like a op shop. We're going bored sh*tless heaps she'll be right budgie
+                smugglers. Grab us a durry mate she'll be right dunny rat. She'll be right larrikin with skite.
+                As stands out like kero it'll be truckie.
+            </p>
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="js/html5.js"></script>
+<script src="js/jquery-2.1.4.min.js" type='text/javascript'></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/javascript.js"></script>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="/node_modules/angular-sanitize/angular-sanitize.js"></script>
+<script src="js/services.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/controllers.js"></script>
+
+</body>
+</html>

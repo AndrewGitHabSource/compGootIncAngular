@@ -1,0 +1,28 @@
+<section class="articles" ng-controller="ArticleController">
+
+    <article class="article">
+
+        <div class="wrapper-image">
+            <a href=""><img src="{{post.image}}" alt="image" title="image"></a>
+
+            <div class="continue">
+                <a href="">+</a>
+                <a href="" class="link">></a>
+            </div>
+        </div>
+
+        <div class="content-article">
+
+            <h2>{{post.name}}</h2>
+
+            <p ng-bind-html="post.description"></p>
+        </div>
+
+        <div class="bottom-info">
+            <time>{{post.date}}</time>
+
+            <p class="like">{{post.like}}</p>
+        </div>
+    </article>
+
+</section>

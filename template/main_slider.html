@@ -1,0 +1,24 @@
+<div class="slider-item" ng-repeat="post in postsSlider">
+    <div class="image-slider">
+        <a href="#/article/{{post.id}}"><img ng-src="{{post.image}}" alt="image" title="image"></a>
+
+        <p class="caption">{{post.name}}</p>
+    </div>
+
+    <div class="slider-info">
+
+        <div ng-bind-html="post.description"></div>
+
+        <div class="details-info">
+            <div class="more-slide">
+                <a href="#/article/{{post.id}}"><span></span><span class="rotate"></span></a>
+            </div>
+
+            <p class="date-info">{{post.date}}</p>
+        </div>
+
+
+    </div>
+</div>
+
+

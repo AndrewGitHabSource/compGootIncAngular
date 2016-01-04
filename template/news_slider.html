@@ -1,0 +1,16 @@
+<div class="slider-item" ng-repeat="new in news">
+    <div class="news">
+        <div class="wrapper-image">
+            <a href="#/article/{{new.id}}"><img ng-src="{{ new.image }}" alt="news" title="news"></a>
+
+            <div class="top-link"></div>
+            <a href="#/article/{{new.id}}" class="icon-link"></a>
+        </div>
+
+        <div class="news-info">
+            <h2>{{ new.name }}</h2>
+
+            <p>{{ new.description }}</p>
+        </div>
+    </div>
+</div>
