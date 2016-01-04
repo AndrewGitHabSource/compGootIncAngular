@@ -32,9 +32,11 @@ mainApp.controller('HomeController', [
 
         randomNumber = $scope.generateRandom(10, 11);
 
-        $scope.randomPost = $Post.query({parameter: randomNumber});
         $scope.postSlider = $Post.query({parameter: "slider"});
         $scope.newsSlider = $Post.query({parameter: "news"});
+        $scope.randomPost = $Post.query({parameter: randomNumber});
+
+        console.log($scope.randomPost);
 
         $http({method: 'GET', url: 'data/posts.json'}).
             success(function (data) {

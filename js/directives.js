@@ -3,9 +3,11 @@ var mainDirectives = angular.module('mainDirectives', ['ngResource']);
 mainDirectives.directive('ngRightPanel', function () {
     return {
         templateUrl: 'template/right_panel.html',
-        link: function (scope) {
+        link: function (scope, elem, attrs) {
 
-            scope.postRight = scope.randomPost[0];
+            scope.postRight = scope[attrs["ngRightPanel"]];
+
+            console.log(scope.postRight);
 
         }
     };
@@ -32,7 +34,7 @@ mainDirectives.directive('ngSlider', function ($timeout) {
                     });
 
                 });
-            }, 20);
+            }, 50);
 
         }
     };
@@ -66,7 +68,7 @@ mainDirectives.directive('ngNews', function ($timeout) {
                         $(this).parent().find(".top-link").css({"border-color": "#373737"});
 
                     });
-                }, 20);
+                }, 50);
 
 
             });

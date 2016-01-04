@@ -1,13 +1,15 @@
-<div class="image-block">
-    <a href="#/article/{{postRight.id}}"><img ng-src="{{postRight.image}}" title="custom" alt="title"></a>
+<div ng-repeat="postRand in postRight">
+    <div class="image-block">
+        <a href="#/article/{{postRand.id}}"><img ng-src="{{postRand.image}}" title="custom" alt="title"></a>
 
-    <div class="top-link"></div>
-    <a href="#/article/{{postRight.id}}" class="icon-link"></a>
-</div>
+        <div class="top-link"></div>
+        <a href="#/article/{{postRand.id}}" class="icon-link"></a>
+    </div>
 
-<div class="content-article">
+    <div class="content-article">
 
-    <h2>{{postRight.name}}</h2>
+        <h2>{{postRight.name}}</h2>
 
-    <p ng-bind-html="postRight.description"></p>
+        <p ng-bind-html="postRand.description"></p>
+    </div>
 </div>
