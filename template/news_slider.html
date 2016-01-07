@@ -1,16 +1,28 @@
-<div class="slider-item" ng-repeat="new in news">
-    <div class="news">
-        <div class="wrapper-image">
-            <a href="#/article/{{new.id}}"><img ng-src="{{ new.image }}" alt="news" title="news"></a>
+<div ng-go-news>
+    <div class="wrapper-carousel">
+        <div class="carousel-item" ng-repeat="new in news">
+            <div class="news">
+                <div class="wrapper-image">
+                    <a href="#/article/{{new.id}}"><img ng-src="{{ new.image }}" alt="news" title="news"></a>
 
-            <div class="top-link"></div>
-            <a href="#/article/{{new.id}}" class="icon-link"></a>
-        </div>
+                    <a class="corner" href="#/article/{{new.id}}">
+                        <span class="top-link"></span>
+                        <span class="icon-link"></span>
+                    </a>
 
-        <div class="news-info">
-            <h2>{{ new.name }}</h2>
+                </div>
 
-            <p>{{ new.description }}</p>
+                <div class="news-info">
+                    <h2>{{ new.name }}</h2>
+
+                    <p>{{ new.description }}</p>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="nav-news">
+        <p class="prev" ng-click="prev()"><</p>
+        <p class="next" ng-click="next()">></p>
+    </div>
 </div>
+

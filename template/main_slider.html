@@ -1,24 +1,35 @@
-<div class="slider-item" ng-repeat="post in postsSlider">
-    <div class="image-slider">
-        <a href="#/article/{{post.id}}"><img ng-src="{{post.image}}" alt="image" title="image"></a>
+<div ng-go-slider>
+    <div class="wrapper-elements">
+        <div class="slider-item" ng-repeat="post in postsSlider" >
+            <div class="image-slider">
+                <a href="#/article/{{post.id}}"><img ng-src="{{post.image}}" alt="image" title="image"></a>
 
-        <p class="caption">{{post.name}}</p>
-    </div>
-
-    <div class="slider-info">
-
-        <div ng-bind-html="post.description"></div>
-
-        <div class="details-info">
-            <div class="more-slide">
-                <a href="#/article/{{post.id}}"><span></span><span class="rotate"></span></a>
+                <p class="caption">{{post.name}}</p>
             </div>
 
-            <p class="date-info">{{post.date}}</p>
+            <div class="slider-info">
+
+                <div ng-bind-html="post.description"></div>
+
+                <div class="details-info">
+                    <div class="more-slide">
+                        <a href="#/article/{{post.id}}"><span></span><span class="rotate"></span></a>
+                    </div>
+
+                    <p class="date-info">{{post.date}}</p>
+                </div>
+
+            </div>
         </div>
 
+        <div class="nav-slider">
+            <p class="prev-slide" ng-click="prevSlide()" href=""><</p>
 
+            <p class="next-slide" ng-click="nextSlide()" href="">></p>
+        </div>
     </div>
 </div>
+
+
 
 

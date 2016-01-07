@@ -1,4 +1,4 @@
-<div class="bxslider main-slider" ng-slider></div>
+<div class="bxslider main-slider" ng-slider="postSlider"></div>
 
 
 <div class="news-wrapper">
@@ -7,7 +7,7 @@
 
 <section class="articles">
 
-    <article class="article" ng-repeat="post in posts">
+    <article class="article" ng-repeat="post in ctrl.posts">
 
         <a href="#/article/{{post.id}}" class="read-more">
             <i></i>

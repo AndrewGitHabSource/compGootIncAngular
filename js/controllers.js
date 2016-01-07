@@ -21,41 +21,53 @@ mainApp.config([
 ]);
 
 mainApp.controller('HomeController', [
-    '$scope', '$http', '$Post',
-    function ($scope, $http, $Post) {
+    '$scope', '$http', 'GetPost',
+    function ($scope, $http, GetPost) {
 
-        var randomNumber = 11;
+        var ctrl = this;
 
-        $scope.generateRandom = function getRandomInt(min, max) {
+        this.postSlider = GetPost.query({ parameter: "slider" });
+        this.newsSlider = GetPost.query({ parameter: "news" });
+        this.posts      = GetPost.query({ parameter: "posts" });
+
+        return angular.extend($scope, ctrl);
+
+    }
+]);
+
+mainApp.controller('RightController', [
+    '$scope', '$http', 'GetPost',
+    function ($scope, $http, GetPost) {
+
+        var number = 10,
+            ctrlRight = this;
+
+        this.generateRandom = function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
         };
 
-        randomNumber = $scope.generateRandom(10, 11);
+        number = this.generateRandom(8, 8);
 
-        $scope.postSlider = $Post.query({parameter: "slider"});
-        $scope.newsSlider = $Post.query({parameter: "news"});
-        $scope.randomPost = $Post.query({parameter: randomNumber});
+        this.postRandom = null;
 
-        console.log($scope.randomPost);
+        GetPost.query({ parameter: "posts"}, function(data) {
 
-        $http({method: 'GET', url: 'data/posts.json'}).
-            success(function (data) {
-                $scope.posts = data;
-            });
+            ctrlRight.postRandom = data[number - 1];
+
+        });
 
     }
 ]);
+
 
 mainApp.controller('ArticleController', [
-    '$scope', '$http', '$routeParams',
-    function ($scope, $http, $routeParams) {
+    '$scope', '$http', '$routeParams', 'GetPost',
+    function ($scope, $http, $routeParams, GetPost) {
 
-        var patch = 'data/' + $routeParams.id + '.json';
-
-        $http({method: 'GET', url: patch}).
-            success(function (data) {
-                $scope.post = data[0];
-            });
+        GetPost.query({ parameter: "posts"}, function(data) {
+            $scope.post = data[$routeParams.id - 1];
+        });
 
     }
 ]);
+

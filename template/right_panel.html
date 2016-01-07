@@ -1,15 +1,16 @@
-<div ng-repeat="postRand in postRight">
-    <div class="image-block">
-        <a href="#/article/{{postRand.id}}"><img ng-src="{{postRand.image}}" title="custom" alt="title"></a>
+<div class="image-block">
+    <a href="#/article/{{ctrlRight.postRandom.id}}"><img ng-src="{{ctrlRight.postRandom.image}}" title="custom" alt="title"></a>
 
-        <div class="top-link"></div>
-        <a href="#/article/{{postRand.id}}" class="icon-link"></a>
-    </div>
-
-    <div class="content-article">
-
-        <h2>{{postRight.name}}</h2>
-
-        <p ng-bind-html="postRand.description"></p>
-    </div>
+    <a class="corner" href="#/article/{{ctrlRight.postRandom.id}}">
+        <span class="top-link"></span>
+        <span class="icon-link"></span>
+    </a>
 </div>
+
+<div class="content-article">
+
+    <h2>{{ctrlRight.postRandom.name}}</h2>
+
+    <p ng-bind-html="ctrlRight.postRandom.description"></p>
+</div>
+

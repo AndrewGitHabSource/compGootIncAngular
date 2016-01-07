@@ -2,9 +2,9 @@
 
 var mainServices = angular.module('mainServices', ['ngResource']);
 
-mainServices.factory('$Post', ['$resource',
+mainServices.factory('GetPost', ['$resource',
     function ($resource) {
-        return $resource('data/:parameter.json', {}, {
-            query: {method: 'GET', params: {parameter: 'posts'}, isArray: true}
+        return $resource('data/:parameter.json', {param: ""}, {
+            query: { method: 'GET', params: { parameter: 'posts' }, isArray: true }
         });
     }]);
